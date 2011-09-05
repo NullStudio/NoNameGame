@@ -3,6 +3,12 @@
 #include "Game.hpp"
 #include "GameState.hpp"
 
+StateManager& StateManager::GetInstance()
+{
+    static StateManager self;
+    return self;
+}
+
 StateManager::StateManager()
 {
     //ctor

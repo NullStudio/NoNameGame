@@ -9,8 +9,10 @@ class GameState;
 class StateManager
 {
     public:
-        StateManager();
-        virtual ~StateManager();
+        //StateManager();
+        //virtual ~StateManager();
+
+        static StateManager& GetInstance();
 
         void Register(Game* game);
         bool IsEmpty();
@@ -32,6 +34,11 @@ class StateManager
         void CleanUp();
 
     private:
+
+        StateManager();
+        StateManager(const StateManager&);
+        ~StateManager();
+
         Game*                   mGame;
         std::vector<GameState*> mGameStates;
 };

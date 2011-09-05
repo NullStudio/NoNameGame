@@ -36,5 +36,5 @@ float Player::GetMaxWalkVelocity() const
 
 float Player::GetJumpVelocity() const
 {
-	return 4.0f;
+	return 2.0f;
 }

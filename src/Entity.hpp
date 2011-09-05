@@ -11,6 +11,7 @@ class Entity : public sf::Sprite
         ~Entity();
     private:
         int mLife;
+
 };
 
 #endif

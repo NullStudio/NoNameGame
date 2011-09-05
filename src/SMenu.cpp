@@ -18,10 +18,10 @@ void SMenu::Init()
 {
     std::cout << "-- SMenu::Init()" << std::endl;
     mMenuBG = new sf::Sprite;
-    mMenuBG->SetImage( mGame->mResourceManager->GetImage("back.png") );
+    mMenuBG->SetImage( mGame->mResourceManager.GetImage("back.png") );
 
     mRock = new sf::Sprite;
-    mRock->SetImage( mGame->mResourceManager->GetImage("rock2.png") );
+    mRock->SetImage( mGame->mResourceManager.GetImage("rock2.png") );
 }
 
 void SMenu::End()

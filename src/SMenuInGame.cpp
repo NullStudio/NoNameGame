@@ -15,7 +15,7 @@ SMenuInGame::~SMenuInGame()
 void SMenuInGame::Init()
 {
     mMenuInGameBG = new sf::Sprite;
-    mMenuInGameBG->SetImage( mGame->mResourceManager->GetImage("BGMenuInGame.png") );
+    mMenuInGameBG->SetImage( mGame->mResourceManager.GetImage("BGMenuInGame.png") );
 }
 
 void SMenuInGame::End()

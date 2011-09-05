@@ -17,6 +17,14 @@ void StringToValues(std::string str, std::string separator, std::vector<int>* re
     }
 }
 
+
+ResourceManager& ResourceManager::GetInstance()
+{
+    static ResourceManager self;
+    return self;
+}
+
+
 ResourceManager::ResourceManager()
 {
 

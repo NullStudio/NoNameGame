@@ -10,6 +10,14 @@
 
 #include "GameState.hpp"
 
+//definitions for physics world <-> window projection coordinate transformation
+#define PIXELS_PER_METER	64.0f
+#define METERS_PER_PIXEL	(1.0f/PIXELS_PER_METER)
+//shorthand version
+#define PPM PIXELS_PER_METER
+#define MPP METERS_PER_PIXEL
+
+
 class SInGame : public GameState
 {
     public:
@@ -40,6 +48,8 @@ class SInGame : public GameState
         b2World*    mWorld;
 
         sf::Clock   *timer;
+
+        sf::Vector2f ConvertToScreen(const b2Vec2& physicsVector) const;
 };
 
 #endif

@@ -21,8 +21,8 @@ class Game
         const sf::Input&    mInput;
 
         //Managers HERE
-        StateManager        mStateManager;
-        ResourceManager*    mResourceManager;
+        StateManager&       mStateManager;
+        ResourceManager&    mResourceManager;
 
         sf::RenderWindow& GetApp();
 

@@ -13,8 +13,10 @@ class ResourceManager {
 
 	public:
 
-		ResourceManager();
-		~ResourceManager();
+		//ResourceManager();
+		//~ResourceManager();
+
+        static ResourceManager& GetInstance();
 
 		bool Init();
 		void End();
@@ -29,6 +31,10 @@ class ResourceManager {
 		std::vector<AnimationDef>    LoadAnimationXML(const std::string& filename);
 
 	private:
+
+        ResourceManager();
+        ResourceManager(const ResourceManager&);
+        ~ResourceManager();
 
 		std::map< std::string, sf::Image > mImages;
 		std::vector< std::string > mResourceDir;

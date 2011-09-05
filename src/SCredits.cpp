@@ -21,11 +21,11 @@ void SCredits::Init()
     SetRunningState(true);
 
     mCreditsBG = new sf::Sprite;
-    mCreditsBG->SetImage( mGame->mResourceManager->GetImage("creditsBG.png") );
+    mCreditsBG->SetImage( mGame->mResourceManager.GetImage("creditsBG.png") );
 
     mCredits1 = new sf::Sprite;
     //mCredits1->SetImage( mGame->mResourceManager->GetImage("credits1.png") );
-    mCredits1->SetImage( mGame->mResourceManager->GetImage("aliens.png") );
+    mCredits1->SetImage( mGame->mResourceManager.GetImage("aliens.png") );
     mCredits1->SetPosition(250, 200);
 
     mCreditsMusic.OpenFromFile("music/creditsMusic.ogg");

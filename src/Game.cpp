@@ -12,7 +12,8 @@ Game& Game::GetInstance()
 
 Game::Game() :
     mInput( mApp.GetInput() ),
-    mStateManager(),
+    mStateManager( StateManager::GetInstance() ),
+    mResourceManager( ResourceManager::GetInstance() ),
     mIsRunning(false)
 {
 
@@ -47,8 +48,8 @@ void Game::Init(std::string theTitle)
     mApp.SetFramerateLimit(60);
 
     //ResourceManager INIT
-    mResourceManager = new ResourceManager;
-    mResourceManager->AddResourceDir("images/");
+    //mResourceManager = new ResourceManager;
+    mResourceManager.AddResourceDir("images/");
 
     //StateManager INIT
     mStateManager.Register(this);
@@ -58,7 +59,7 @@ void Game::Init(std::string theTitle)
 void Game::End()
 {
     std::cout << "Game::End()" << std::endl;
-    delete mResourceManager;
+    //delete mResourceManager;
     mApp.Close();
 }
 
